@@ -1,0 +1,207 @@
+@font-face {
+    font-family: 'Comic';
+    src: url(../fuentes/ComicNeue-Bold.ttf);
+
+}
+
+@font-face {
+    font-family: 'Comic-textos';
+    src: url(../fuentes/ComicNeue-Regular.ttf);
+
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Comic;
+    margin: 0;
+
+}
+
+body {
+    background-color: bisque;
+}
+
+
+.navbar div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 1em;
+    display: block;
+}
+
+
+.posicion {
+    margin-left: 70px;
+    margin-right: 70px;
+
+}
+
+.logos-redes {
+    width: 25px;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+.titulos {
+    font-size: 4em;
+    font-family: Comic;
+    text-align: center;
+    padding: 5px;
+}
+
+.titulos2 {
+    font-family: Comic;
+    font-size: 2em;
+
+}
+
+.titulo-principal {
+    font-size: 4em;
+    font-family: Comic;
+    display: inline;
+}
+
+
+.titulo-nvar {
+    color: white;
+    display: inline-block;
+    font-family: Comic;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    padding: 1em;
+
+    align-items: center;
+}
+
+.producto {
+    background-color: white;
+    border: 1px solid;
+    border-radius: 1em;
+    min-height: 100px;
+}
+
+.imagen-producto {
+    overflow: hidden;
+
+
+}
+
+.imagen-producto img {
+    display: block;
+    width: 100%;
+}
+
+.productos-imagenes {
+    width: 100%;
+}
+
+.textos {
+
+    font-family: 'Comic-textos';
+    font-size: 1em;
+}
+
+.contenedor-relative {
+    position: relative;
+}
+
+.img-float-r {
+    float: right;
+    width: 300px;
+    margin: 5px;
+    border-radius: 15px;
+    clear: right;
+}
+
+.img-float-l {
+    float: left;
+    width: 300px;
+    margin: 5px;
+    border-radius: 10px;
+    clear: right;
+}
+
+
+.fondo {
+
+    background-image: url(../imagenes/Fondo-donas7.jpg);
+    background-size: cover;
+
+    height: 450px;
+    background-attachment: fixed;
+}
+
+.texto-imagen {
+
+    font-family: 'Comic';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.281);
+    border-radius: 10px;
+    color: blanchedalmond;
+
+    bottom: 10px;
+    left: 20px;
+}
+
+.video-float {
+    float: left;
+    border-radius: 10px;
+    width: 360px;
+    height: 215px;
+    margin: 5px;
+    clear: left;
+
+}
+
+
+.imagenes {
+    width: 200px;
+
+}
+
+.imagen-logo {
+    /* width: auto;
+    height: 70px;
+     */
+    flex-basis: 12%;
+    padding: 0.5em;
+    display: inline-block;
+
+}
+
+.menu {
+    align-self: center;
+}
+
+.redes-sociales {
+    position: fixed;
+    bottom: 30%;
+    right: 20px;
+
+}
+
+.redes-sociales a {
+    display: block;
+}
+
+.redes-sociales img {
+    width: 35px;
+}
