@@ -10,12 +10,56 @@
 
 }
 
+@keyframes cambiar-fondo {
+    0% {
+        background-image: url(../imagenes/fondo-donas8.JPG);
+        background-size: cover;
+    }
+
+    25% {
+        background-image: url(../imagenes/fondo-donas4.jpg);
+        background-size: cover;
+    }
+
+    50% {
+        background-image: url(../imagenes/fondo-donas2.JPG);
+        background-size: cover;
+    }
+
+    75% {
+        background-image: url(../imagenes/Fondo-donas6.jpg);
+        background-size: cover;
+    }
+
+    100% {
+        background-image: url(../imagenes/fondo-donas8.JPG);
+        background-size: cover;
+    }
+}
+
+@keyframes mover-elemento {
+
+    from {
+        transform: translateX(200px);
+    }
+
+    to {
+        transform: translateX(-200px);
+        color: blueviolet;
+    
+    }
+
+
+}
+
 * {
     box-sizing: border-box;
     font-family: Comic;
     margin: 0;
 
 }
+
+
 
 body {
     background-color: bisque;
@@ -27,12 +71,22 @@ body {
     flex-wrap: wrap;
 }
 
-.navbar ul {
+.menu {
     margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+
+}
+
+.menu-link {
+    border-radius: 15px;
+    transition: background-color 2s;
+}
+
+.menu-link:hover {
+    background-color: aqua;
 }
 
 .navbar a {
@@ -55,26 +109,6 @@ body {
     margin: 0px;
 
 }
-
-.titulos {
-    font-size: 4em;
-    font-family: Comic;
-    text-align: center;
-    padding: 5px;
-}
-
-.titulos2 {
-    font-family: Comic;
-    font-size: 2em;
-
-}
-
-.titulo-principal {
-    font-size: 4em;
-    font-family: Comic;
-    display: inline;
-}
-
 
 .titulo-nvar {
     color: white;
@@ -100,8 +134,6 @@ body {
 
 .imagen-producto {
     overflow: hidden;
-
-
 }
 
 .imagen-producto img {
@@ -113,11 +145,6 @@ body {
     width: 100%;
 }
 
-.textos {
-
-    font-family: 'Comic-textos';
-    font-size: 1em;
-}
 
 .contenedor-relative {
     position: relative;
@@ -139,19 +166,28 @@ body {
     clear: right;
 }
 
-
 .fondo {
+    /* background-image: url(../imagenes/Fondo-donas7.jpg); */
 
-    background-image: url(../imagenes/Fondo-donas7.jpg);
-    background-size: cover;
-
+    background-position: center;
     height: 450px;
     background-attachment: fixed;
+
+
+
+    /* Animaciones Keyframes (Animaciones que se corren solas, sin necesidad de la iteración del usuario */
+    animation-name: cambiar-fondo;
+    /* Duración de la animación */
+    animation-duration: 6s;
+    /* El ciclo se hace infinito */
+    animation-iteration-count: infinite;
+
+    /* Short hand */
+    /* animation: cambiar-fondo 5s infinite; */
+
 }
 
 .texto-imagen {
-
-    font-family: 'Comic';
     position: absolute;
     background-color: rgba(0, 0, 0, 0.281);
     border-radius: 10px;
@@ -178,10 +214,10 @@ body {
 }
 
 .imagen-logo {
-    /* width: auto;
-    height: 70px;
-     */
-    flex-basis: 12%;
+    width: 70px;
+    height: auto;
+
+    flex-basis: 10%;
     padding: 0.5em;
     display: inline-block;
 
@@ -198,10 +234,24 @@ body {
 
 }
 
-.redes-sociales a {
+.redes-sociales-link {
     display: block;
+
+    /* Estado inicial */
+    transform: scale(1);
+    transition: transform 700ms;
+}
+
+.redes-sociales-link:hover {
+    /* Estado Final */
+    transform: scale(1.3);
+
 }
 
 .redes-sociales img {
     width: 35px;
+}
+
+.footer-h3 {
+    animation: mover-elemento 4s infinite ease-in-out;
 }

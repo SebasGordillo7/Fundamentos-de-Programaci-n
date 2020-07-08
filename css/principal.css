@@ -1,3 +1,27 @@
+.titulos {
+    font-size: 4em;
+    font-family: Comic;
+    text-align: center;
+    padding: 5px;
+}
+
+.titulos2 {
+    font-family: Comic;
+    font-size: 2em;
+
+}
+
+.titulo-principal {
+    font-size: 4em;
+    font-family: Comic;
+    display: inline;
+}
+
+.textos {
+    font-family: 'Comic-textos';
+    font-size: 1em;
+}
+
 .header {
     background-color: rgba(0, 0, 0, 0.849);
   
@@ -19,6 +43,7 @@
     position: sticky;
     top: 0;
     z-index: 1;
+    margin-bottom: 20px;
 }
 
 .footer {
@@ -31,3 +56,4 @@
 
     font-size: 30px;
 }
+
